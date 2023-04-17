@@ -23,7 +23,7 @@ dicionario = {
         "casa": "Grifinória",
         "altura": 1.65,
         "nascimento": "19/09/1979",
-        "imagem": "https://upload.wikimedia.org/wikipedia/ed/d/d3/Hermione_Granger_poster.jpg"
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Hermione_Granger_by_Reilly_Brown.JPG"
     },
     4: {
         "nome": "Draco Malfoy",
@@ -31,7 +31,7 @@ dicionario = {
         "casa": "Sonserina",
         "altura": 1.80,
         "nascimento": "05/06/1980",
-        "imagem": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Draco_Malfoy.jpg"
+        "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Drago_Malefoy.jpg/320px-Drago_Malefoy.jpg"
     }
 }
 
