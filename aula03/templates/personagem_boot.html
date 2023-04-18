@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persongem</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+</head>
+<body>
+    <div class="container mt-5 ">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{imagem}}" alt="{{nome}}" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <h1>{{nome}}</h1>
+                <p>É da raça {{raça}}, estuda na {{casa}}</p>
+                <p>{{nome}} nasceu em {{nascimento}} e tem {{altura}} de altura</p>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.mim.js')}}"></script>
+</body>
+</html>
