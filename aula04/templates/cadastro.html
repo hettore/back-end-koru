@@ -1,0 +1,42 @@
+{% extends 'base.html' %}   
+
+{% block content %}
+   <h1>Cadastro de Personagem</h1>
+    <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
+        <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="number" class="form-control" id="id" value="{{ id }}" required>
+            <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
+            <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="form-group">
+            <label for="nome">Raça:</label>
+            <input type="text" class="form-control" id="raca" name="raca" value="{{ raça }}" required>
+            <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="form-group">
+            <label for="nome">Casa:</label>
+            <input type="text" class="form-control" id="casa" name="casa" value="{{ casa }}" required>
+            <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="form-group">
+            <label for="nome">Altura:</label>
+            <input type="text" class="form-control" id="altura" name="altura" value="{{ altura }}" required>
+            <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="form-group">
+            <label for="nome">Nascimento:</label>
+            <input type="text" class="form-control" id="nascimento" name="nascimento" value="{{ nascimento }}" required>
+            <div class="invalid-feedback">Campo obrigatório</div>
+        </div>
+        <div class="form-group">
+            <label for="nome">Imagem:</label>
+            <input type="text" class="form-control" id="imagem" name="imagem" value="{{ imagem }}" required>
+            <img src="{{ imagem }}" style="max-width: 200px; max-height: 200px;">
+        </div>
+    </form>
+    {% endblock %}
