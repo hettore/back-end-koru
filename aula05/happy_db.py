@@ -1,7 +1,7 @@
 import sqlite3
 import os
 
-caminho = f"{os.path.dirname(__file__)}\\bd\\harry_potter.db"
+caminho = f"{os.path.dirname(__file__)}\\db\\harry_potter.db"
 
 #Conectar com o banco de dados
 conexao = sqlite3.connect(caminho)
