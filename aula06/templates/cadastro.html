@@ -5,7 +5,7 @@
     <form method="POST" enctype="multipart/form-data" action="" class="needs-validation" data-toggle="validator">
         <div class="form-group">
             <label for="id">ID:</label>
-            <input type="number" class="form-control" id="id" value="{{ id }}" required>
+            <input type="number" class="form-control" id="id" name="id" value="{{ id }}" required>
             <div class="invalid-feedback">Campo obrigatório</div>
         </div>
         <div class="form-group">
@@ -15,7 +15,7 @@
         </div>
         <div class="form-group">
             <label for="nome">Raça:</label>
-            <input type="text" class="form-control" id="raca" name="raca" value="{{ raça }}" required>
+            <input type="text" class="form-control" id="raca" name="raca" value="{{ raca }}" required>
             <div class="invalid-feedback">Campo obrigatório</div>
         </div>
         <div class="form-group">

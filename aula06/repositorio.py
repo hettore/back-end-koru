@@ -39,17 +39,17 @@ def tratar_dmy_para_iso(data:str):
 def gerar_id():
     conn = sqlite3.connect(caminho)
     cursor = conn.cursor()
-    cursor.execute("SELECT seq FROM sqlite_sequence WHERE name='personagens")
+    cursor.execute("SELECT seq FROM sqlite_sequence WHERE name='personagens'")
     next_id = cursor.fetchone()[0]
     return next_id + 1
 
 #Criar um novo personagem no dicionário
-def criar_personagem(nome, raca, casa, altura, nascimento, imagem):
+def criar_personagem(nome, raca, casa, nascimento, altura, imagem):
     try:
         conn = sqlite3.connect(caminho)
         cursor = conn.cursor()
-        sql_insert = "INSERT INTO personagens (nome_personagem, raca_personagem, casa_personagem, altura_personagem, nascimento_personagem, imagem_personagem) values (?, ?, ?, ?, ?, ? )"
-        cursor.execute(sql_insert, (nome, raca, casa, altura, nascimento, imagem))
+        sql_insert = "INSERT INTO personagens (nome_personagem, raca_personagem, casa_personagem, nascimento_personagem, altura_personagem, imagem_personagem) values (?, ?, ?, ?, ?, ? )"
+        cursor.execute(sql_insert, (nome, raca, casa, nascimento, altura, imagem))
         personagem_id = cursor.lastrowid
         conn.commit()
         conn.close()
@@ -81,20 +81,20 @@ def retornar_personagem(id:int):
 
         sql_select = "SELECT * FROM personagens WHERE id_personagem = ?"
         cursor.execute(sql_select, (id, ))
-        id, nome, raca, casa, altura, nascimento, imagem = cursor.fetchone()
+        id, nome, raca, casa, nascimento, altura, imagem = cursor.fetchone()
         conn.close()
-        return id, nome, raca, casa, altura, nascimento, imagem
+        return id, nome, raca, casa, nascimento, altura, imagem
     except:
         return False
 
 #Atualiza os dados de um personagem
-def atualizar_personagem(id:int, nome, raca, casa, altura, nascimento, imagem):
+def atualizar_personagem(id:int, nome, raca, casa, nascimento, altura, imagem):
     try:
         #Tentar atualizar
         conn = sqlite3.connect(caminho)
         cursor = conn.cursor()
-        sql_update = "UPDATE personagens SET nome_personagem = ?, raca_personagem = ?, casa_personagem = ?, altura_personagem = ?, nascimento_personagem = ?, imagem_personagem = ? WHERE id_personagem = ?"
-        cursor.execute(sql_update, (nome, raca, casa, altura, nascimento, imagem, id))
+        sql_update = "UPDATE personagens SET nome_personagem = ?, raca_personagem = ?, casa_personagem = ?, nascimento_personagem = ?, altura_personagem = ?, imagem_personagem = ? WHERE id_personagem = ?"
+        cursor.execute(sql_update, (nome, raca, casa, nascimento, altura, imagem, id))
         conn.commit()
         conn.close()
         return True
